@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Number Visualizer</title>
+    <link rel="stylesheet" href="solver.css"
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="brand">Complex Operations</div>
+      <div class="nav-links">
+        <div class="nav-links">
+            <a href="solver.html">Visualization</a>
+            <a href="index.html">Operations</a>
+          </div>
+    </div>
+  </header>
+
+    <div id="app">
+        <h1>Complex Number Visualizer</h1>
+        
+        <div class="controls">
+            <h3>Enter Complex Number</h3>
+            <div class="input-container">
+                <label for="realPart">Real Part:</label>
+                <input type="number" id="realPart" placeholder="Enter real part" value="3">
+            </div>
+            <div class="input-container">
+                <label for="imagPart">Imaginary Part:</label>
+                <input type="number" id="imagPart" placeholder="Enter imaginary part" value="2">
+            </div>
+            <button id="plotButton" onclick="plotComplexNumber()">Plot Complex Number</button>
+            
+            <div class="control-buttons">
+                <button onclick="visualizer.clearAll()" style="background: #e74c3c;">Clear All</button>
+                <button onclick="visualizer.toggleGrid()" style="background: #3498db;">Toggle Grid</button>
+                <button onclick="visualizer.togglePolar()" style="background: #9b59b6;">Toggle Polar</button>
+                <button onclick="visualizer.toggleTrail()" style="background: #e67e22;">Toggle Trail</button>
+                <button onclick="demonstrateOperations()" style="background: #27ae60;">Demo Operations</button>
+            </div>
+            
+            <div class="tips">
+                <p>💡 Click on the canvas to add complex numbers</p>
+                <p>🖱️ Use mouse wheel to zoom in/out</p>
+            </div>
+        </div>
+
+        <div id="visualization">
+            <canvas id="complexCanvas" width="800" height="600"></canvas>
+        </div>
+    </div>
+    <footer>
+        <div>Created by Hala A.S</div>
+    </footer>
+
+    <script src="solver.js"></script>
+    </script>
+</body>
+</html>

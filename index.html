@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex Number Operations</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="brand">Complex Operations</div>
+      <div class="nav-links">
+        <a href="solver.html">Visualization</a>
+        <a href="index.html">Operations</a>
+        <a href="#" onclick="toggleDarkTheme()">🌙 Theme</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Complex Number Operations</h1>
+    
+    <div class="input-section">
+      <div class="complex-input">
+        <h3>Complex Number z₁</h3>
+        <div class="input-group">
+          <label for="real1">Real Part:</label>
+          <input type="number" id="real1" placeholder="Enter real part" step="any">
+        </div>
+        <div class="input-group">
+          <label for="imag1">Imaginary Part:</label>
+          <input type="number" id="imag1" placeholder="Enter imaginary part" step="any">
+        </div>
+      </div>
+      
+      <div class="complex-input">
+        <h3>Complex Number z₂</h3>
+        <div class="input-group">
+          <label for="real2">Real Part:</label>
+          <input type="number" id="real2" placeholder="Enter real part" step="any">
+        </div>
+        <div class="input-group">
+          <label for="imag2">Imaginary Part:</label>
+          <input type="number" id="imag2" placeholder="Enter imaginary part" step="any">
+        </div>
+      </div>
+    </div>
+
+    <button class="calculate-btn" onclick="performOperations()">
+      Calculate All Operations
+    </button>
+
+    <div id="results-container">
+      <!-- Results will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <footer>
+    <div>Created by Hala A.S | Enhanced Complex Calculator</div>
+    <div style="font-size: 0.9em; margin-top: 10px;">
+      Keyboard shortcuts: Ctrl+Enter (Calculate) | Ctrl+D (Toggle Theme)
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
+
+
