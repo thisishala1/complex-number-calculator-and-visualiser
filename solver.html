@@ -4,51 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complex Number Visualizer</title>
-    <link rel="stylesheet" href="solver.css"
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="solver.css">
+    
 </head>
 <body>
   <header>
     <div class="navbar">
       <div class="brand">Complex Operations</div>
       <div class="nav-links">
-        <div class="nav-links">
-            <a href="solver.html">Visualization</a>
-            <a href="index.html">Operations</a>
-          </div>
+        <a href="solver.html">Visualization</a>
+        <a href="index.html">Operations</a>
+      </div>
     </div>
   </header>
 
     <div id="app">
         <h1>Complex Number Visualizer</h1>
         
-        <div class="controls">
-            <h3>Enter Complex Number</h3>
-            <div class="input-container">
-                <label for="realPart">Real Part:</label>
-                <input type="number" id="realPart" placeholder="Enter real part" value="3">
-            </div>
-            <div class="input-container">
-                <label for="imagPart">Imaginary Part:</label>
-                <input type="number" id="imagPart" placeholder="Enter imaginary part" value="2">
-            </div>
-            <button id="plotButton" onclick="plotComplexNumber()">Plot Complex Number</button>
-            
-            <div class="control-buttons">
-                <button onclick="visualizer.clearAll()" style="background: #e74c3c;">Clear All</button>
-                <button onclick="visualizer.toggleGrid()" style="background: #3498db;">Toggle Grid</button>
-                <button onclick="visualizer.togglePolar()" style="background: #9b59b6;">Toggle Polar</button>
-                <button onclick="visualizer.toggleTrail()" style="background: #e67e22;">Toggle Trail</button>
-                <button onclick="demonstrateOperations()" style="background: #27ae60;">Demo Operations</button>
+        <div class="input-section">
+            <div class="complex-input">
+                <h3>Enter Complex Number</h3>
+                <div class="input-group">
+                    <label for="realPart">Real Part:</label>
+                    <input type="number" id="realPart" placeholder="Enter real part" value="3">
+                </div>
+                <div class="input-group">
+                    <label for="imagPart">Imaginary Part:</label>
+                    <input type="number" id="imagPart" placeholder="Enter imaginary part" value="2">
+                </div>
+                <button id="plotButton" onclick="plotComplexNumber()">Plot Complex Number</button>
             </div>
             
-            <div class="tips">
-                <p>💡 Click on the canvas to add complex numbers</p>
-                <p>🖱️ Use mouse wheel to zoom in/out</p>
+            <div class="complex-input">
+                <h3>Operations</h3>
+                <div class="control-buttons">
+                    <button onclick="visualizer.clearAll()" style="background: linear-gradient(45deg, #e74c3c, #c0392b);">Clear All</button>
+                    <button onclick="visualizer.toggleGrid()" style="background: linear-gradient(45deg, #3498db, #2980b9);">Toggle Grid</button>
+                    <button onclick="visualizer.togglePolar()" style="background: linear-gradient(45deg, #9b59b6, #8e44ad);">Toggle Polar</button>
+                    <button onclick="visualizer.toggleTrail()" style="background: linear-gradient(45deg, #e67e22, #d35400);">Toggle Trail</button>
+                    <button onclick="demonstrateOperations()" style="background: linear-gradient(45deg, #2ecc71, #27ae60);">Demo Operations</button>
+                </div>
+                
+                <div class="tips">
+                    <p>💡 Click on the canvas to add complex numbers</p>
+                    <p>🖱️ Use mouse wheel to zoom in/out</p>
+                    <p>📱 Touch and pinch to zoom on mobile</p>
+                </div>
             </div>
         </div>
 
         <div id="visualization">
-            <canvas id="complexCanvas" width="800" height="600"></canvas>
+            <canvas id="complexCanvas"></canvas>
+        </div>
+        
+        <div class="results-grid">
+            <div class="result-card">
+                <h4>Current Point</h4>
+                <div id="currentPoint" class="result-value">3 + 2i</div>
+            </div>
+            <div class="result-card">
+                <h4>Magnitude</h4>
+                <div id="magnitude" class="result-value">3.61</div>
+            </div>
+            <div class="result-card">
+                <h4>Angle</h4>
+                <div id="angle" class="result-value">33.7°</div>
+            </div>
+            <div class="result-card">
+                <h4>Conjugate</h4>
+                <div id="conjugate" class="result-value">3 - 2i</div>
+            </div>
         </div>
     </div>
     <footer>
@@ -56,6 +82,6 @@
     </footer>
 
     <script src="solver.js"></script>
-    </script>
 </body>
 </html>
+
