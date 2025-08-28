@@ -1,16 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #333;
-  min-height: 100vh;
-  line-height: 1.6;
-}
 
 header {
   background: rgba(255, 255, 255, 0.1);
@@ -114,17 +102,14 @@ input {
 
 input:focus {
   outline: none;
-  border-color: #667eea;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
   transform: translateY(-2px);
 }
 
 button {
   padding: 12px 24px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
   color: white;
   border: none;
-  border-radius: 25px;
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
