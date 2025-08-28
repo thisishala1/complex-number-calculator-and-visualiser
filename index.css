@@ -1,164 +1,338 @@
-.input-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin: 30px 0;
-}
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #22C55E;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(34, 197, 94, 0.2);
+        }
+        
+        #app {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        h1 {
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(45deg, #22C55E, #86efac);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .input-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+            width: 100%;
+        }
 
-.complex-input {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-}
+        .complex-input {
+            background-color: rgba(255, 255, 255, 0.089);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
 
-.complex-input:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
+        .complex-input:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
 
-.complex-input h3 {
-  color: #667eea;
-  margin-bottom: 20px;
-  font-size: 1.3em;
-  text-align: center;
-}
+        .complex-input h3 {
+            color: #22C55E;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            text-align: center;
+        }
 
-.input-group {
-  margin-bottom: 20px;
-}
+        .input-group {
+            margin-bottom: 20px;
+        }
 
-.input-group label {
-  color: #555;
-  font-weight: 600;
-  margin-bottom: 8px;
-  display: block;
-}
+        .input-group label {
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
 
-.calculate-btn {
-  width: 100%;
-  margin: 30px 0;
-  padding: 15px;
-  font-size: 1.2em;
-  background: linear-gradient(45deg, #667eea, #764ba2);
-  border-radius: 30px;
-  transition: all 0.3s ease;
-}
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
 
-.calculate-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
-}
+        .input-group input:focus {
+            outline: none;
+            border-color: #22C55E;
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.3);
+        }
+        
+        .controls {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .controls h3 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #22C55E;
+        }
+        
+        .input-container {
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .input-container input {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+        }
+        
+        button {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            background: linear-gradient(45deg, #166534, #22C55E);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 0.5rem;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .calculate-btn {
+            width: 100%;
+            margin: 30px 0;
+            padding: 15px;
+            font-size: 1.2em;
+            background: linear-gradient(45deg, #166534, #22C55E);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
 
-.results-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
+        .calculate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(34, 197, 94, 0.4);
+        }
+        
+        #visualization {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        #complexCanvas {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 12px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+        
+        .control-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        
+        .control-buttons button {
+            width: auto;
+            flex: 1;
+            min-width: 120px;
+            padding: 0.7rem;
+            font-size: 0.9rem;
+        }
+        
+        .tips {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            width: 100%;
+        }
 
-.result-card {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-  text-align: center;
-}
+        .result-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
 
-.result-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
+        .result-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
 
-.result-card h4 {
-  color: #667eea;
-  margin-bottom: 10px;
-  font-size: 1.1em;
-}
+        .result-card h4 {
+            color: #22C55E;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
 
-.result-value {
-  font-size: 1.2em;
-  font-weight: 600;
-  color: #333;
-  background: linear-gradient(45deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+        .result-value {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+            background: linear-gradient(45deg, #166534, #22C55E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-/* Animation for results */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+        /* Animation for results */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-.result-card {
-  animation: fadeInUp 0.6s ease forwards;
-}
+        .result-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
 
-.result-card:nth-child(1) { animation-delay: 0.1s; }
-.result-card:nth-child(2) { animation-delay: 0.2s; }
-.result-card:nth-child(3) { animation-delay: 0.3s; }
-.result-card:nth-child(4) { animation-delay: 0.4s; }
-.result-card:nth-child(5) { animation-delay: 0.5s; }
-.result-card:nth-child(6) { animation-delay: 0.6s; }
-.result-card:nth-child(7) { animation-delay: 0.7s; }
-.result-card:nth-child(8) { animation-delay: 0.8s; }
-.result-card:nth-child(9) { animation-delay: 0.9s; }
-.result-card:nth-child(10) { animation-delay: 1.0s; }
-
-/* Dark theme adjustments */
-.dark-theme .complex-input,
-.dark-theme .result-card {
-  background: rgba(52, 73, 94, 0.95);
-  color: white;
-}
-
-.dark-theme .complex-input h3,
-.dark-theme .result-card h4 {
-  color: #74b9ff;
-}
-
-.dark-theme .input-group label {
-  color: #ddd;
-}
-
-.dark-theme .result-value {
-  color: white;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .input-section {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .results-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-  }
-  
-  .complex-input {
-    padding: 20px;
-  }
-  
-  .calculate-btn {
-    padding: 12px;
-    font-size: 1.1em;
-  }
-}
-
-
+        .result-card:nth-child(1) { animation-delay: 0.1s; }
+        .result-card:nth-child(2) { animation-delay: 0.2s; }
+        .result-card:nth-child(3) { animation-delay: 0.3s; }
+        .result-card:nth-child(4) { animation-delay: 0.4s; }
+        .result-card:nth-child(5) { animation-delay: 0.5s; }
+        
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .input-section {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .results-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+            }
+            
+            .complex-input {
+                padding: 20px;
+            }
+            
+            .calculate-btn {
+                padding: 12px;
+                font-size: 1.1em;
+            }
+            
+            .control-buttons {
+                flex-direction: column;
+            }
+            
+            .control-buttons button {
+                width: 100%;
+            }
+        }
